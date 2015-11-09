@@ -5,7 +5,7 @@ class Test2 {
 	public static void main(String argv[]) {
 		try {
 			int c = readOneChar();
-			System.out.println("The character " + c + "was read");		
+			System.out.println("The character " + c + " was read");
 		} catch (FileNotFoundException e) {
 			System.out.println("File did not exist");
 		} catch (IOException e) {
