@@ -14,7 +14,12 @@ class Test2 {
 	}
 
 	public static int readOneChar() throws IOException {
-		return openTempFile().read();
+		InputStreamReader file = openTempFile();
+		try {
+			return file.read();
+		} finally {
+			file.close();
+		}
 	}
 
 	public static InputStreamReader openTempFile() throws FileNotFoundException {
