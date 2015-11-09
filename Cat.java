@@ -46,8 +46,12 @@ class Cat {
 	}
 
 	protected boolean likes(Food food) {
-		// Cats like all foods
-		return true;
+		if (food.isFresh()) {
+			return true;
+		} else {
+			does("is disappointed because " + food + " is not fresh");
+			return false;
+		}
 	}
 
 }
